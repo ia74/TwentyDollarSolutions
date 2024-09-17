@@ -13,18 +13,18 @@ public class TwentyDollarFacundo {
         while(noSets-- > 0) {
             String line = scan.nextLine();
             String deck = line.split(" ")[0];
+            String lacedWithFent = "";
             int shuffleAmount = Integer.parseInt(line.split(" ")[1]);
             for(int j = 0; j < shuffleAmount; j++) {
                 char[] leftHalf = deck.substring(0, deck.length() / 2).toCharArray();
                 char[] rightHalf = deck.substring(deck.length() / 2, deck.length() - 1).toCharArray();
-                String lacedWithFent = "";
+                System.out.println(leftHalf);
+                System.out.println(rightHalf);
                 for(int i = 0; i < leftHalf.length; i++) {
-                    System.out.println(Arrays.toString(leftHalf));
-                    System.out.println(Arrays.toString(rightHalf));
                     lacedWithFent += String.valueOf(leftHalf[i]) + String.valueOf(rightHalf[i]);
                 }
-            System.out.println(lacedWithFent);
             }
+            System.out.println(lacedWithFent);
         }
     }
 }

@@ -3,6 +3,8 @@ package solutions;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TwentyDollarDecode {
     int ASd[];
@@ -11,15 +13,19 @@ public class TwentyDollarDecode {
         int sets = scan.nextInt();
         scan.nextLine();
         while(sets-- > 0) {
-            Queue<String> stack = new LinkedList<>();
+            Stack<String> stack = new Stack<>();
+            Stack<String> finalStack = new Stack<>();
             String line = scan.nextLine();
-            int curc = 0;
 
-            System.out.println(stack);
-            while(!stack.isEmpty()) {
-                System.out.print(stack.remove());
+            Pattern pattern = Pattern.compile("(\\d)\\[(.*)]", Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(line);
+            boolean matchFound = matcher.find();
+            if(matchFound) {
+                System.out.println("Match found");
+                
+            } else {
+                System.out.println("Match not found");
             }
-            System.out.println();
         }
     }
 }

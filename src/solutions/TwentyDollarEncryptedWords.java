@@ -15,9 +15,9 @@ public class TwentyDollarEncryptedWords {
             StringBuilder rebuilt = new StringBuilder();
             for(int i = 1; i < spaces.length + 1; i++) {
                 if(i % 2 == 0) {
-                    rebuilt.append(transform(spaces[i - 1], i) + " ");
+                    rebuilt.append(transform(spaces[i - 1], i)).append(" ");
                 } else {
-                    rebuilt.append(new StringBuilder(spaces[i - 1]).reverse().toString() + " ");
+                    rebuilt.append(new StringBuilder(spaces[i - 1]).reverse()).append(" ");
                 }
             }
             System.out.println(rebuilt);

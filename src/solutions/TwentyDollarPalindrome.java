@@ -2,6 +2,7 @@ package solutions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TwentyDollarPalindrome {
@@ -19,27 +20,26 @@ public class TwentyDollarPalindrome {
 
             String reversed = line.substring(0,line.length()-1);
             String reversed2 = new StringBuilder(line.substring(0,line.length()-1)).reverse().toString();
-            String tmp1 = line;
-            boolean flag = false;
-            for(int i = 0; i < reversed.length(); i++) {
-                tmp1 += reversed.charAt(i);
-                if(isPalindrome(tmp1)) {
-                    System.out.println(tmp1);
-                    flag = true;
-                    break;
-                }
-            }
-            if(flag) continue;
-            tmp1 = line;
-            for(int i = 0; i < reversed2.length(); i++) {
-                tmp1 += reversed2.charAt(i);
-                if(isPalindrome(tmp1)) {
-                    System.out.println(tmp1);
-                    break;
-                }
-            }
+            String tmp1;
+            tmp1 = isFlag(reversed2, line);
+            if(!isPalindrome(tmp1)) tmp1 = isFlag(reversed, line);
+
+            System.out.println(tmp1);
         }
     }
+    private static String isFlag(String reversed, String tmp1) {
+        int c = 0;
+        for(int i = 0; i < reversed.length(); i++) {
+            tmp1 += reversed.charAt(i);
+            if (isPalindrome(tmp1)) {
+                c++;
+            } else if(c > 0) {
+                return tmp1;
+            }
+        }
+        return tmp1;
+    }
+
     static boolean isPalindrome(String line) {
         int pco = 0;
         for(int i = 0; i < line.length(); i++) {

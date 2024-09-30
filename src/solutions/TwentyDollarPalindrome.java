@@ -18,26 +18,23 @@ public class TwentyDollarPalindrome {
                 continue;
             }
 
-            String reversed = line.substring(0,line.length()-1);
-            String reversed2 = new StringBuilder(line.substring(0,line.length()-1)).reverse().toString();
-            String tmp1;
-            tmp1 = isFlag(reversed2, line);
-            if(!isPalindrome(tmp1)) tmp1 = isFlag(reversed, line);
+            String reversed2 = new StringBuilder(line).reverse().toString();
+            String tmp1 = isFlag(reversed2, line);
 
             System.out.println(tmp1);
         }
     }
-    private static String isFlag(String reversed, String tmp1) {
-        int c = 0;
-        for(int i = 0; i < reversed.length(); i++) {
-            tmp1 += reversed.charAt(i);
-            if (isPalindrome(tmp1)) {
-                c++;
-            } else if(c > 0) {
-                return tmp1;
+    private static String isFlag(String reversed, String str) {
+        String ret = str;
+        String tmp;
+        for(int i = 0; i < str.length(); i++) {
+            tmp = str.substring(0, i) + reversed;
+            if (isPalindrome(tmp)) {
+                ret = tmp;
+                break;
             }
         }
-        return tmp1;
+        return ret;
     }
 
     static boolean isPalindrome(String line) {

@@ -21,8 +21,7 @@ public class TwentyDollarDecode {
             Matcher matcher = pattern.matcher(line);
             boolean matchFound = matcher.find();
             if(matchFound) {
-                System.out.println("Match found");
-                
+                System.out.println("Match found" + matcher.group(0));
             } else {
                 System.out.println("Match not found");
             }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TwentyDollarPalindrome {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException { 
         Scanner scan = new Scanner(new File("pr72.dat"));
         int sets = scan.nextInt();
         scan.nextLine();

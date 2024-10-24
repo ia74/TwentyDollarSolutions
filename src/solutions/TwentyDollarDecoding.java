@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+//hi nerds
 public class TwentyDollarDecoding {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(new File("decoding.dat"));

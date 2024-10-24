@@ -11,8 +11,8 @@ public class TwentyDollarAlphaSplit {
         scan.nextLine();
         while(sets-- > 0) {
             String line = scan.nextLine();
-            String AtoM = line.replaceAll("[^A-M]", " ");
-            String NtoZ = line.replaceAll("[^N-Z]", " ");
+            String AtoM = line.replaceAll("[^a-mA-M0-9\\W]", " ");
+            String NtoZ = line.replaceAll("[^n-zN-Z0-9\\W]", " ");
 
             System.out.println(AtoM);
             System.out.println(NtoZ);

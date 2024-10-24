@@ -15,7 +15,7 @@ public class TwentyDollarBaseMall {
         while(sets-- > 0) {
             String line = scan.nextLine();
             String regex = "\\d+";
-
+            // dont you just hate it wgen you lock in too hard and become an armenian nu metal band
             Matcher m = Pattern.compile(regex).matcher(line);
 
             ArrayList<String> matches = new ArrayList<>();

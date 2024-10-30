@@ -2,12 +2,11 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class TwentyDollarMazeSolver {
+public class TwentyDollarShortestPath {
     public static class Point {
         public int row;
         public int col;
@@ -58,7 +57,7 @@ public class TwentyDollarMazeSolver {
     };
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File("pr92.dat"));
+        Scanner scan = new Scanner(new File("pr120.dat"));
         int noSets = scan.nextInt();
         scan.nextLine();
         while (noSets-- > 0) {
@@ -79,8 +78,7 @@ public class TwentyDollarMazeSolver {
             }
             boolean[][] visited = new boolean[rows][cols];
             int minSteps = bfs(maze, start, visited);
-            if(minSteps > 0) System.out.println("EXIT FOUND");
-            else System.out.println("NO EXIT");
+            System.out.println(minSteps);
         }
     }
 }

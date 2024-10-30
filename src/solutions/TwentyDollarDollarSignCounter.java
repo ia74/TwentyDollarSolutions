@@ -2,12 +2,11 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class TwentyDollarMazeSolver {
+public class TwentyDollarDollarSignCounter {
     public static class Point {
         public int row;
         public int col;
@@ -45,11 +44,12 @@ public class TwentyDollarMazeSolver {
                     row < maze.length &&
                     col < maze[0].length &&
                     !visited[row][col] &&
-                    !maze[row][col].equals("#"))
+                    !maze[row][col].equals("."))
                 {
                     visited[row][col] = true;
-                    if (maze[row][col].equals("E"))
-                        return toVisit.moves + 1;
+                    if (maze[row][col].equals("$"))
+                        toVisit.moves += 1;
+                    else return toVisit.moves;
                     queue.add(new Point(row, col, toVisit.moves + 1));
                 }
             }
@@ -58,29 +58,30 @@ public class TwentyDollarMazeSolver {
     };
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File("pr92.dat"));
-        int noSets = scan.nextInt();
+        Scanner scan = new Scanner(new File("pr90.dat"));
+        String[] definition = scan.nextLine().split(" ");
+        int rows = Integer.parseInt(definition[0]);
+        int cols = Integer.parseInt(definition[1]);
+        String[][] maze = new String[rows][cols];
+        Point start = new Point(0, 0);
+        for(int i = 0; i < rows; i++) {
+            String line = scan.nextLine();
+            String[] splat = line.split("");
+            System.arraycopy(splat, 0, maze[i], 0, cols);
+        }
+        int num = scan.nextInt();
         scan.nextLine();
-        while (noSets-- > 0) {
-            String[] definition = scan.nextLine().split(" ");
-            int rows = Integer.parseInt(definition[0]);
-            int cols = Integer.parseInt(definition[1]);
-            String[][] maze = new String[rows][cols];
-            Point start = new Point(0, 0);
-            for(int i = 0; i < rows; i++) {
-                String line = scan.nextLine();
-                String[] splat = line.split("");
-                for(int j = 0; j < cols; j++) {
-                    maze[i][j] = splat[j];
-                    if(splat[j].equals("S")) {
-                        start = new Point(i, j);
-                    };
-                }
-            }
+        Point[] starts = new Point[num];
+        for(int i = 0; i < num; i++) {
+            String line = scan.nextLine();
+            int a = Integer.parseInt(line.split(" ")[0]);
+            int b = Integer.parseInt(line.split(" ")[1]);
+            starts[i] = new Point(a, b);
+        }
+        for (Point point : starts) {
             boolean[][] visited = new boolean[rows][cols];
-            int minSteps = bfs(maze, start, visited);
-            if(minSteps > 0) System.out.println("EXIT FOUND");
-            else System.out.println("NO EXIT");
+            int minSteps = bfs(maze, point, visited);
+            System.out.println(minSteps);
         }
     }
 }

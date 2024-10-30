@@ -1,5 +1,10 @@
-import java.util.*;
-import java.io.*;
+package solutions;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class TwentyDollarMagdalena {
     public static void main(String[] args) throws FileNotFoundException {
         HashMap<Integer, String> letters = new HashMap<>();
@@ -19,7 +24,7 @@ public class TwentyDollarMagdalena {
         int rs = nSets;
         scan.nextLine();
         while(nSets-->0) {
-            int n = scan.nextLine();
+            int n = scan.nextInt();
             System.out.println(letters);
             System.out.println("Case #" + (rs - nSets) + ": a");
         }

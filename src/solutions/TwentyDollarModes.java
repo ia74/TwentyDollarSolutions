@@ -10,7 +10,6 @@ public class TwentyDollarModes {
         int sets = scan.nextInt();
         scan.nextLine();
         while(sets-- > 0) {
-            int[] highestModeCount = {-1, -1};
             String[] spaces = scan.nextLine().split(" ");
             ArrayList<Integer> nums = new ArrayList<>();
             HashMap<Integer, Integer> freqs = new HashMap<>();
@@ -22,17 +21,26 @@ public class TwentyDollarModes {
             for(int i : nums) {
                 if(!freqs.containsKey(i)) freqs.put(i, 0);
                 freqs.put(i, freqs.get(i) + 1);
-                int nc = freqs.get(i);
-                if(highestModeCount[0] < nc) {
-                    highestModeCount[0] = nc;
-                    highestModeCount[1] = i;
-                }
-             }
-            int cc=0;
-            for(int j : nums) {
-                if(freqs.get(j) == highestModeCount[0]) cc++;
             }
-            System.out.println(cc);
+            int highestFoundFrequency = highestFrequencyOf(freqs);
+            int c = 0;
+            boolean firstFind = false;
+            for(int frequency : freqs.values()) {
+                if(highestFoundFrequency <= frequency) {
+                    if(!firstFind || highestFoundFrequency == frequency) c++;
+                    highestFoundFrequency= frequency;
+                    firstFind = true;
+                }
+            }
+            String yn = c > 1 ? "S": "";
+            System.out.println(c +" MODE" + yn);
         }
+    }
+    static int highestFrequencyOf(HashMap<Integer, Integer> numbers) {
+        int a = 0;
+        for(int i : numbers.values()) {
+            if(i > a) a = i;
+        }
+        return a;
     }
 }

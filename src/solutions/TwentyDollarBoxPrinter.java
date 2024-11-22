@@ -20,6 +20,7 @@ public class TwentyDollarBoxPrinter {
             String laBox = "-".repeat(width) + "\n";
             for(int i = 0; i < height - 2; i ++)
                 laBox += "|" + " ".repeat(width - (width >= 3 ? 3 : 1)) +" |\n";
+            if(height <= 2) laBox += "| |\n";
             laBox += "-".repeat(width);
             System.out.println(laBox);
         }

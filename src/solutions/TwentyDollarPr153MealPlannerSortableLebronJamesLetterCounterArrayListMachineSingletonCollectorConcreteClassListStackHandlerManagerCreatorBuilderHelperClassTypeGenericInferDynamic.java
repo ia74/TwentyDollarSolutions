@@ -52,22 +52,23 @@ public class TwentyDollarPr153MealPlannerSortableLebronJamesLetterCounterArrayLi
             int count2 = 0;
             int count3 = 0;
             for(Food food : yum) {
-                int curr = fat.min;
-                while(curr < fat.max) {
+                int curr = fat.max;
+                while(curr > fat.min) {
                     if(food.fat == 0) break;
-                    curr += food.fat;
+                    curr -= food.fat;
                     count++;
+                    System.out.println(count +" - " + curr + " - " + food.fat);
                 }
-                curr = protein.min;
-                while(curr < protein.max) {
+                curr = protein.max;
+                while(curr > protein.min) {
                     if(food.protein == 0) break;
-                    curr += food.protein;
+                    curr -= food.protein;
                     count2++;
                 }
-                curr = carbs.min;
-                while(curr < carbs.max) {
+                curr = carbs.max;
+                while(curr > carbs.min) {
                     if(food.carbs == 0) break;
-                    curr += food.carbs;
+                    curr -= food.carbs;
                     count3++;
                 }
             }

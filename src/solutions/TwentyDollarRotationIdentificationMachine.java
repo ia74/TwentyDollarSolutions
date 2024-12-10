@@ -16,12 +16,16 @@ public class TwentyDollarRotationIdentificationMachine {
             String[] line = scan.nextLine().split(" ");
             String a = line[0];
             String b = line[1];
-
-            String end = "";
-            for(int i = 0; i < a.length()/2; i++) {
-                end += a.substring(i, i+1);
+            boolean pass = false;
+            for(int i = 0; i < a.length(); i++) {
+                String suba = a.substring(0, i);
+                String subb = a.substring(i);
+                if((subb + suba).equals(b)) {
+                    pass = true;
+                    break;
+                }
             }
-            System.out.println(end);
+            System.out.println(pass ? "YES" : "NO");
         }
     }
 }

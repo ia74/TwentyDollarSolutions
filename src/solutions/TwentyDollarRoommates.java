@@ -9,8 +9,8 @@ import java.util.*;
 public class TwentyDollarRoommates {
     public static class Person {
         String name;
-        ArrayList<String> categories;
-        public Person(String name, ArrayList<String> categories) {
+        Set<String> categories;
+        public Person(String name, Set<String> categories) {
             this.name = name;
             this.categories = categories;
         }
@@ -31,10 +31,9 @@ public class TwentyDollarRoommates {
             int num = scan.nextInt();
             scan.nextLine();
             ArrayList<Person> people = new ArrayList<>();
-            TreeMap<String, Integer> rooms = new TreeMap<>();
             TreeSet<String> total = new TreeSet<>();
             while(num --> 0) {
-                ArrayList<String> categories = new ArrayList<>();
+                Set<String> categories = new TreeSet<>();
                 String username = "";
                 String ln = scan.nextLine();
                 username = ln.split(" ")[0];
@@ -47,32 +46,24 @@ public class TwentyDollarRoommates {
                 }
                 people.add(new Person(username, categories));
             }
-            for(int i = 0; i < people.size(); i ++) {
-                Person person = people.get(i);
-                for(int j = 0; j < people.size(); j++) {
-                    Person personTwo = people.get(j);
-                    if(person == personTwo) continue;
-                    for(String category : person.categories) {
-                        for(String categoryTwo : personTwo.categories) {
-                            if(category.equals(categoryTwo)) {
-                                if(!rooms.containsKey(category)) rooms.put(category, 0);
-                                if(rooms.get(category) == 2) continue;
-                                rooms.put(category, rooms.get(category) + 1);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
             boolean pass = true;
-            if(rooms.size() != total.size()) pass = false;
-            for(int i = 0; i < rooms.size(); i++) {
-                if(total.toArray()[i] != rooms.keySet().toArray()[i]) {
-                    pass = false;
-                    break;
-                }
+            for(int i = 0; i < people.size() -1;i +=2) {
+                Person person = people.get(i);
+                Person personTwo = people.get(i+1);
+                pass = shareCommon(person, personTwo);
+                break;
             }
             System.out.println(pass ? "YES" : "NO");
         }
+    }
+    static boolean shareCommon(Person person1, Person person2) {
+        for(String category : person1.categories) {
+            for(String category2 : person2.categories) {
+                if(category.equals(category2)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

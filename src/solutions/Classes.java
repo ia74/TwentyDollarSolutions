@@ -106,7 +106,7 @@ public class Classes {
             return place - otherPlace;
         };
 
-        Comparator<SkibidiSigma> byRating = (a, b) -> (int) (b.professorRating * 1000 - a.professorRating * 1000);
+        Comparator<SkibidiSigma> byRating = (a, b) -> (int) (b.professorRating * 100 - a.professorRating * 100);
 
         Comparator<SkibidiSigma> byClassTime = (a, b) -> {
             int ahour = -1;
@@ -147,22 +147,24 @@ public class Classes {
             int prio = bySubject.thenComparing(byRating).thenComparing(byClassTime).thenComparing(byCreditHours).compare(a, b);
             if(prio == 0) {
                 return a.code.compareToIgnoreCase(b.code);
-            } else return 0;
+            } else return 1;
         };
 
-        sigmese.sort(bySubject);
-        sigmese.sort(byRating);
         sigmese.sort(byClassTime);
+        sigmese.sort(byRating);
         sigmese.sort(byCreditHours);
+        sigmese.sort(bySubject);
         sigmese.sort(byClassCode);
 
         double currentHours = 0;
+        int count = 0;
 
         for(SkibidiSigma k : sigmese) {
+            count++;
             currentHours += k.creditHours;
             if(currentHours >= 21) break;
             System.out.println(k.code +": " + k.title);
-            System.out.println(k);
+            if(count == 20) break;
         }
     }
 }

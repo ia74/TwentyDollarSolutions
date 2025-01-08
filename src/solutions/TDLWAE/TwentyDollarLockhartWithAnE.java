@@ -10,8 +10,9 @@ public class TwentyDollarLockhartWithAnE {
         window.setResizable(false);
         window.setPreferredSize(new Dimension(400, 400));
 
+        int x = 1;
         JLabel label = new JLabel("Lockhart With An E");
-        label.setLocation(20, 20);
+        label.setLocation(x++, 20);
         window.add(label);
         window.pack();
 
@@ -21,5 +22,9 @@ public class TwentyDollarLockhartWithAnE {
 
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+
+        while(true) {
+            window.repaint();
+        }
     }
 }

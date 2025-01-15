@@ -13,5 +13,6 @@ public class TwentyDollarJustification {
         System.out.println("1234567890123456789012345678901234567890");
         ArrayList<String> lns = new ArrayList<>();
         String ln = "";
+        System.out.println(text);
     }
 }

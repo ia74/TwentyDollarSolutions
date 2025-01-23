@@ -14,7 +14,7 @@ public class TwentyDollarCharSum {
             String ln = scan.nextLine().replaceAll("\\s+", "").replaceAll("\\W+", "").toLowerCase();
             int[] c = new int[]{0};
             Arrays.stream(ln.split("")).forEach((i)->{
-                c[0] += i.compareTo("a") + 27 % 26;
+                c[0] += i.compareTo("a") + 1 % 26;
             });
             System.out.println(c[0]);
         }

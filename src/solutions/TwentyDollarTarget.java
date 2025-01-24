@@ -65,29 +65,41 @@ public class TwentyDollarTarget {
                 col -= column_direction;
                 column_direction = -1;
                 row_direction = 0;
-                col += -1;
+                col -= 1;
                 System.out.println("Step: row==maxRows");
                 visited[row][col] = true;
                 queue.add(new Point(row, col, visiting.moves + 1));
-            } else if(!visited[row-row_direction - 1][col-column_direction]) {
-                row -= row_direction;
-                col -= column_direction;
-                column_direction = 0;
-                row_direction = -1;
-                row -= 1;
-                System.out.println(row);
-                if(row == 0) {
-                    row += 1;
-                    column_direction = 1;
-                    row_direction = 0;
-                    maxRows --;
-                    maxColumns --;
-                } else {
-                    visited[row][col] = true;
-                    queue.add(new Point(row, col, visiting.moves + 1));
+            } else {
+                if(column_direction + row_direction == 0) {
+                    maxColumns--;
+                }
+                    if(row - row_direction-1 <= 0) {
+                        System.out.println("HELOELO " + new Point(row, col));
+                        maxRows--;
+                        maxColumns--;
+                        column_direction = 1;
+                        row_direction = 0;
+                        output[0][0] = 1;
+                        queue.add(new Point(row+2, col, visiting.moves-1));
+                        continue;
+                    }
+                if(!visited[row-row_direction - 1][col-column_direction]) {
+                    row -= row_direction;
+                    col -= column_direction;
+                    column_direction = 0;
+                    row_direction = -1;
+                    row -= 1;
+                    if(row <= 0) {
+                        column_direction = 1;
+                        row_direction = 0;
+                    } else {
+                    System.out.println("Hello?");
+                        visited[row][col] = true;
+                        queue.add(new Point(row, col, visiting.moves + 1));
+                    }
                 }
             }
-            printT(output);
+//            printT(output);
         }
         return output;
     }
@@ -99,7 +111,7 @@ public class TwentyDollarTarget {
             int n = scan.nextInt();
             int[][] a = new int[n][n];
             printT(
-                    bfs(a, new Point(0, 0))
+                    bfs(a, new Point(0, 0, 1))
             );
         }
     }

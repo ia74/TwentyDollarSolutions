@@ -30,7 +30,7 @@ public class TwentyDollarKsenyia {
         }
     }
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Scanner scan = new Scanner(new File("judging/ksenyia.dat"));
+        Scanner scan = new Scanner(new File("judging/uil_a_2025/ksenyia.dat")); //TODO: change to "ksenyia.dat"
         Void thing;
         int sets = scan.nextInt();
         scan.nextLine();

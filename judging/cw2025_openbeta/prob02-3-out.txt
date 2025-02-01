@@ -1,0 +1,4 @@
+10101 is odd
+97 is odd
+-1 is odd
+FLASH FAILED

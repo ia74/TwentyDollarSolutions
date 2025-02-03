@@ -1,9 +1,9 @@
+package solutions.CodeFloors;
 import java.util.*;
 import java.io.*;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-package solutions.CodeFloors;
 
 public class prob03 {
 	public static void main(String[] args) throws IOException {

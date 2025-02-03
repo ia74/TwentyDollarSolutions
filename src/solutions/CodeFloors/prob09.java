@@ -1,6 +1,6 @@
+package solutions.CodeFloors;
 import java.util.*;
 import java.io.*;
-package solutions.CodeFloors;
 public class prob09 {
 	public static class LebronDate {
 		int year;

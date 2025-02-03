@@ -1,0 +1,15 @@
+14
+5 6 * true
+4 7 # false
+12 12 % true
+14 15 @ false
+1 1 $ true
+1 1 $ false
+2 2 & true
+2 2 & false
+3 3 ^ true
+3 3 ^ false
+1 6 % false
+15 3 > false
+3 12 < false
+9 1 ? true

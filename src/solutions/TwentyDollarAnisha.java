@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class TwentyDollarAnisha {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File("anisha.dat"));
+        Scanner scan = new Scanner(new File("judging/uil_a_2025/anisha.dat")); //TODO: change to "anisha.dat"
         int noSets = scan.nextInt();
         scan.nextLine();
         while(noSets-- > 0) {

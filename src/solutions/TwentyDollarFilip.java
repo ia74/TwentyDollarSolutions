@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class TwentyDollarFilip {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File("filip.dat"));
+        Scanner scan = new Scanner(new File("judging/uil_a_2025/filip.dat")); //TODO: change to "filip.dat"
         int nSets = scan.nextInt();
         scan.nextLine();
         while(nSets-- > 0) {

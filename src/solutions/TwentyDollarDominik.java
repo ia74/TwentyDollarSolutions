@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class TwentyDollarDominik {
     public static void main(String[] args) throws IOException {
-        Scanner scan = new Scanner(new File("dominik.dat"));
+        Scanner scan = new Scanner(new File("judging/uil_a_2025/dominik.dat")); //TODO: change to "dominik.dat"
         int ndates = scan.nextInt();
         int sets = scan.nextInt();
         scan.nextLine();
@@ -23,8 +23,12 @@ public class TwentyDollarDominik {
             String date = ln.split(" ")[0];
             String id = ln.substring(ln.indexOf(" ") + 1);
             DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-            LocalDate dt = LocalDate.parse(date, fmt);
-            times.put(id, dt);
+            try {
+                LocalDate dt = LocalDate.parse(date, fmt);
+                times.put(id, dt);
+            } catch(Exception ignored) {
+                times.put(id, LocalDate.of(1,1,1));
+            }
         }
         while(sets--> 0) {
             String ln = scan.nextLine();

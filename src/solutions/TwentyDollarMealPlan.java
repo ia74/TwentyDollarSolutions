@@ -2,12 +2,11 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TwentyDollarPr153MealPlannerSortableLebronJamesLetterCounterArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarMealPlan {
     public static int does(Integer[] array, int sum, int min) {
         int len = array.length;
         int[][] sumTo = new int[len+1][sum+1];

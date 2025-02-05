@@ -2,12 +2,11 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class TwentyDollarPr151WordCombinationArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarWordCombination {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("pr151.dat"));
         int noSets = scan.nextInt();

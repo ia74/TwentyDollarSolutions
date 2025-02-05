@@ -2,11 +2,9 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Comparator;
 import java.util.Scanner;
-import java.util.TreeSet;
 
-public class TwentyDollarMakeingTryangleTriangleWithLetterCounterArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarLetterTri {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("pr35.dat"));
         int noSets = scan.nextInt();

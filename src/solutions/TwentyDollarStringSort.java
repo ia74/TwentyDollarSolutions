@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TwentyDollarSortInPlaceStringySortableLebronJamesLetterCounterArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarStringSort {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("sort.dat"));
         int noSets = scan.nextInt();

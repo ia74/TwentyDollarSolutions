@@ -4,9 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Stack;
 
-public class TwentyDollarRomanNumericMatematicasShonklerJonklerShufflerFactorySingleton {
+public class TwentyDollarRomanNumerals {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("pr82.dat"));
         int noSets = scan.nextInt();

@@ -2,10 +2,9 @@ package solutions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class TwentyDollarGradingSortableLebronJamesLetterCounterArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarGrading {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("pr170.dat"));
         int noSets = scan.nextInt();

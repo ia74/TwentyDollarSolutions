@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TwentyDollarStonklerJonklerSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClass {
+public class TwentyDollarStocks {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("stocks.dat"));
         int noSets = scan.nextInt();

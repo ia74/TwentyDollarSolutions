@@ -3,10 +3,9 @@ package solutions;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
-public class TwentyDollarAnagramliciousCreatorWordSubstringerArrayListMachineSingletonCollectorConcreteClassListStackHandlerManagerCreatorBuilderHelperClassTypeGenericInferDynamic {
+public class TwentyDollarAnagrams {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("anagrams.dat"));
         int noSets = scan.nextInt();

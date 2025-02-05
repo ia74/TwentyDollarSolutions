@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class TwentyDollarRotationIdentificationMachine {
+public class TwentyDollarRotations {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(new File("pr83.dat"));
         int sets = scan.nextInt();

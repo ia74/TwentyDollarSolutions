@@ -2,11 +2,9 @@ package solutions;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Stack;
 
-public class TwentyDollarParenthesisIdentificationMachine {
+public class TwentyDollarParenthesis {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(new File("pr86.dat"));
         int sets = scan.nextInt();

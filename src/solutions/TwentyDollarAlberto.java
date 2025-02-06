@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class TwentyDollarAlberto {
     public static void main(String[] args) throws IOException {
         System.out.println("""
-                 ___   ___  ___   _____
-                |__ \\ / _ \\|__ \\ | ____|
-                   ) || | | | ) || |__
+                 ___    ___  ___  _____
+                |__ \\  / _ \\|__ \\| ____|
+                   ) || | | |  ) || |__
                   / / | | | | / / |___ \\
-                 / /_ | |_| |/ /_ ___) |
+                 / /_ | |_| |/ /_  ___) |
                 |____| \\___/|____||____/""");
     }
 }

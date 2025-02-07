@@ -16,20 +16,20 @@ public class TwentyDollarDanielle {
         scan.nextLine();
         while(sets--> 0) {
             String count = scan.nextLine();
-            int measure = 0;
-            int index = 0;
             String[] list = count.split(",");
-            if(list[1].equals("2") && list[2].equals("3") && list[3].equals("4")) {
-                measure = Integer.parseInt(list[0]);
-            } else {
-                if(list[2].equals("3") && list[3].equals("4")) {
-                    int song = Integer.parseInt(list[1]) % 2;
-                    song *= song;
-                    song += Integer.parseInt(list[0]);
-                    measure = song;
-                }
+            int[] counting = Arrays.stream(list).mapToInt(Integer::parseInt).toArray();
+            for(int i = 1; i < counting.length; i++) {
+                counting[i] -= (i%4) +1;
             }
-            System.out.println(measure);
+
+            for(int i = counting.length-1; i > 0; i-=2) {
+                counting[i-1] += counting[i] * 9;
+                System.out.println(i-1+" = " + counting[i-1]);
+
+            }
+
+            System.out.println(Arrays.toString(counting));
+            System.out.println(counting[0]);
         }
     }
     /**

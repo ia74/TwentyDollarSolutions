@@ -1,0 +1,50 @@
+17 15
+Sam Franklin: 6 CS CS John Adams Tom Jennings
+John Adams: 3 Music Accounting D D
+Tom Jennings: 2 CS Accounting Sam Franklin
+George Paul: 2 Accounting CS Tom Jennings
+James Lebron: 4 Music CS John Adams
+A A: 5 AA BB B B C C D D E E F F
+B B: 3 BB BB A A G G H H C C E E
+C C: 10 AA DD H H G G F F E E I I
+D D: 1 DD CC J J B B E E F F G G
+E E: 3 EE EE G G H H
+F F: 4 DD EE B B G G A A F F
+G G: 6 BB BB C C
+H H: 8 BB BB A A I I J J
+I I: 2 BB EE Sam Franklin J J B B E E
+J J: 7 EE CC Tom Jennings C C F F
+Sam Franklin
+2 CS
+James Lebron
+4 Accounting
+George Paul
+2 Accounting
+A A
+4 BB
+H H
+5 BB
+J J
+9 BB
+John Adams
+5 CC
+B B
+1 Accounting
+Tom Jennings
+4 AA
+A A
+3 BB
+C C
+2 CC
+I I
+1 DD
+J J
+1 BB
+F F
+1 WW
+C C
+1 AA
+E E
+1 BB
+H H
+1 EE

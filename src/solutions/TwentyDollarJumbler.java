@@ -20,8 +20,7 @@ public class TwentyDollarJumbler {
                 String ln = scan.nextLine();
                 String[] sp = ln.split("");
                 for(int j = 0; j < sp.length; j++) {
-                    String w = sp[j];
-                    matrix[i][j] = w;
+                    matrix[i][j] = sp[j];
                 }
             }
 

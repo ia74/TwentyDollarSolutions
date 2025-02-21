@@ -1,26 +1,21 @@
 package solutions;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class TwentyDollarAmy {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("amy.dat"));
-        int sets = scan.nextInt();
+        int noSets = scan.nextInt();
         scan.nextLine();
-        while(sets-->0) {
-            String ln = scan.next();
-            int maxGuessesPerSecond = scan.nextInt();
-            double combinationsOfPass = fac(ln.length());
-
-            System.out.println(combinationsOfPass );
+        while(noSets-- > 0) {
+            String str = scan.next();
+            BigInteger time = new BigInteger(scan.next());
+            long len = str.length();
+            System.out.println(new BigInteger("36").pow(Math.toIntExact(len)).divide(time));
         }
-    }
-    static double fac(int n) {
-        if(n==0) return n+1;
-        return n*fac(n-1);
     }
 }

@@ -1,0 +1,11 @@
+Three Input OR
+A B C
+D E F G H
+O
+6
+D A A
+E B B
+F C C
+G D E
+H G G
+O H F

@@ -1,0 +1,3 @@
+public static class Main(String[] args){ private void Taco(int input){}}
+class SubMain(String[] args){ private void Dresses(int input){}}
+<TERMINATE>

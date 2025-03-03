@@ -1,0 +1,5 @@
+private static int counter(String x, bool y){}
+function findMax(String data, string toFind){}
+public Task<List<HPEData>> Multiplexer<T>(){}
+class CodeWars<T>{ bool IsTheBest(ref T a, ref T b){}}
+<TERMINATE>

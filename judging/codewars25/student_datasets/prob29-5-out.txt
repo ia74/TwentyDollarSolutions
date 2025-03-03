@@ -1,0 +1,10 @@
+Universal Two Input Gate
+A B : C D E G H I J : K L M N O P Q R S T U V W X Y Z
+0 0 : 1 1 1 1 0 1 1 : 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1
+0 1 : 1 0 1 1 0 1 0 : 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1
+1 0 : 0 1 1 1 0 0 1 : 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1
+1 1 : 0 0 0 1 0 1 1 : 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
+
+JUDGE_NOTE:
+With 2 inputs, there are 16 possible 4-value output sets.
+This NAND circuit creates ALL 16 output combinations!

@@ -1,0 +1,5 @@
+abc@Example.com xyz@example.net
+123@example.edu,codewarsisgreat@hpe.com abc@XYZ.com
+heretherebeDRAGONS@hpe.com
+abc@example.com
+;;;

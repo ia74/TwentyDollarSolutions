@@ -1,0 +1,14 @@
+Full Adder
+A B C
+D E F G H I J
+O S
+9
+D A B
+E D A
+F D B
+G E F
+H G C
+I G H
+J C H
+O H D
+S I J

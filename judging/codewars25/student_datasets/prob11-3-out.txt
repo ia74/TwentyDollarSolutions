@@ -1,0 +1,7 @@
+{
+    "Ft. Collins":"3404 E Harmony Rd. Fort Collins, CO 80528",
+    "Houston":"1701 E. Mossy Oaks Rd. Spring, TX 77389",
+    "New Jersey":"200 Connell Drive Berkeley Heights, NJ 07922",
+    "Roseville":"8000 Foothills Blvd. Roseville, CA 95747",
+    "Virtual":"1234 Internet Dr., Anywhere, USA"
+}

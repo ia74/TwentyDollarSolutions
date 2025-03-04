@@ -1,0 +1,9 @@
+ae: 1
+ia: 1
+ai: 5
+io: 1
+ie: 2
+ei: 1
+ou: 2
+ea: 3
+ua: 2

@@ -1,0 +1,16 @@
+2764531
+3126475
+1765423
+2136475
+4765321
+5126374
+6754231
+7315264
+5764231
+6215374
+
+JUDGE_NOTE:
+Use the line below as input into the First Impressions puzzle,
+or work it out yourself.
+
+Any digits must instead require each _location_. Reach out by odds to _make_ ALL results true.

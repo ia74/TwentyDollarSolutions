@@ -1,0 +1,5 @@
+AccountsReceivable.money
+PID,CID,USD,QTY,SST,DT,OID,EID
+Clients.txt
+CompanyPartners.emps
+Customer

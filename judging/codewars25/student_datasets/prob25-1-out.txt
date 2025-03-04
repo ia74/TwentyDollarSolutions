@@ -1,0 +1,9 @@
+99999999 0 L: 9 has a Persistence of 0.
+77 0 N: 77 has a Persistence of 4.
+    77 -> 49 -> 36 -> 18 -> 8
+31000000 8 G: 31477889 has a Persistence of 8.
+    31477889 -> 338688 -> 27648 -> 2688 -> 768 -> 336 -> 54 -> 20 -> 0
+76 4 L: Persistence 4 does not exist between 76 and 0.
+99999992 5 G: Persistence 5 does not exist between 99999992 and 100000000.
+12345 9 G: 26888999 has a Persistence of 9.
+    26888999 -> 4478976 -> 338688 -> 27648 -> 2688 -> 768 -> 336 -> 54 -> 20 -> 0

@@ -1,0 +1,5 @@
+JUDGE_NOTE:
+Use the line below as input into the First Impressions puzzle,
+or work it out yourself.
+
+Any digits must instead require each _location_. Reach out by odds to _make_ ALL results true.

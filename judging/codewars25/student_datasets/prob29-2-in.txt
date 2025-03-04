@@ -1,0 +1,10 @@
+Half Adder
+B A
+Y X Z
+C S
+5
+Y A B
+X Y A
+Z Y B
+C Y Y
+S X Z

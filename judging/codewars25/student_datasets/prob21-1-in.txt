@@ -1,0 +1,6 @@
+Photos 713 5.83
+Videos 65 222.04
+Apps 2 512.15
+WordDocs 10 1.23
+Songs 321 6.72
+STOP

@@ -1,0 +1,11 @@
+Four Input NAND and AND
+A B C D
+E F G H
+P O
+6
+E A B
+F C D
+G E E
+H F F
+P G H
+O P P

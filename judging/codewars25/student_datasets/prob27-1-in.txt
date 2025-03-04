@@ -1,0 +1,5 @@
+Sales-2024-11-12.ord
+DT,OID,CID,EID,PID,USD,QTY,SST
+CompanyIndex23-34.cust
+HumanResources-2024.emp
+Customer

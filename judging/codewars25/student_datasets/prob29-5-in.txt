@@ -1,0 +1,28 @@
+Universal Two Input Gate
+A B
+C D E G H I J
+K L M N O P Q R S T U V W X Y Z
+23
+C A A
+D B B
+E A B
+G A C
+H G G
+I A D
+J B E
+K G G
+L E E
+M I I
+N C G
+O J J
+P D D
+Q I J
+R C D
+S R R
+T Q Q
+U B B 
+V B E
+W A A
+X A D
+Y A B
+Z A C

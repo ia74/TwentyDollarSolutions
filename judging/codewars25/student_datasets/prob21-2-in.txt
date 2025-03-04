@@ -1,0 +1,8 @@
+Photos 9943 18.99
+Videos 3155 109.72
+Apps 82 123.45
+OfficeFiles 55 6.93
+Songs 15 5.28
+Ringtones 6 1.22
+Misc 85 55.65
+STOP

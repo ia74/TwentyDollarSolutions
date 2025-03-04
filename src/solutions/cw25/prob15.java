@@ -1,11 +1,9 @@
-import java.util.*;
-import java.io.*;
-import java.beans.*;
-import java.lang.*;
-import java.math.*;
-import java.time.*;
+package solutions.cw25;
 
-public class prob16 {
+import java.util.*;
+import java.lang.*;
+
+public class prob15 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		

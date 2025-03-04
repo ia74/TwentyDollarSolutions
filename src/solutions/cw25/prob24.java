@@ -1,3 +1,5 @@
+package solutions.cw25;
+
 import java.util.*;
 
 public class prob24 {

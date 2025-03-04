@@ -1,9 +1,7 @@
+package solutions.cw25;
+
 import java.util.*;
-import java.io.*;
-import java.beans.*;
 import java.lang.*;
-import java.math.*;
-import java.time.*;
 
 public class prob01 {
 	public static void main(String[] args) {

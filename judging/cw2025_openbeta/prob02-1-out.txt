@@ -1,3 +1,0 @@
-19 is odd
-15 is odd
-FLASH FAILED

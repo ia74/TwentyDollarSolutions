@@ -1,0 +1,2 @@
+10005.0 is correct for 5.0 + 10000.0
+440.0 is correct for 444.0 - 4.0

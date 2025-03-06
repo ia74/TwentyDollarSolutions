@@ -19,20 +19,13 @@ public class TwentyDollarMultiplyingMatrices {
         int outputIndices = matrixA.length + matrixB[0].length;
         int[] outputMatrix = new int[outputIndices];
         int c = 0;
-        int[] row = matrixA[0];
-        for(int i = 0; i < matrixA.length; i++) {
-            int[] col = generateColumn(matrixB, i);
-            int dot = dotProduct(row, col);
-            outputMatrix[c++] = dot;
+        for (int[] row : matrixA) {
+            for (int i = 0; i < matrixA.length; i++) {
+                int[] col = generateColumn(matrixB, i);
+                int dot = dotProduct(row, col);
+                outputMatrix[c++] = dot;
+            }
         }
-
-        row = matrixA[1];
-        for(int i = 0; i < matrixA.length; i++) {
-            int[] col = generateColumn(matrixB, i);
-            int dot = dotProduct(row, col);
-            outputMatrix[c++] = dot;
-        }
-
         System.out.println(Arrays.toString(outputMatrix));
     }
     static int dotProduct(int[] a, int[] b) {

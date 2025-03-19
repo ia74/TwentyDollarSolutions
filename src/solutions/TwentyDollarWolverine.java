@@ -20,7 +20,7 @@ public class TwentyDollarWolverine {
             LocalDate ln1 = LocalDate.from(fmt.parse(scan.nextLine()));
             String ln2 = scan.nextLine();
             String[] parts = ln2.split(" ");
-            Integer partTwo = Integer.valueOf(parts[2]);
+            Integer partTwo = Integer.valueOf(parts[1]);
             switch(parts[0]) {
                 case "D": {
                     ln1 = ln1.plusDays(partTwo);
@@ -35,7 +35,7 @@ public class TwentyDollarWolverine {
                     break;
                 }
             }
-            System.out.println(ln1.toString());
+            System.out.println(ln1.format(DateTimeFormatter.ofPattern("MMMM dd, yyyy")));
         }
     }
 }
